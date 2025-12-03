@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практична робота №4 — Клавіатура</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page">
+    <header class="page__header header">
+        <h1 class="header__title">Практична робота №4</h1>
+        <p class="header__subtitle">Повнорозмірна клавіатура на CSS Grid</p>
+    </header>
+
+    <main class="page__main">
+        <section class="keyboard-display">
+            <div class="keyboard-display__field">
+                <label for="kbd-input">Ввід:</label>
+                <input id="kbd-input" type="text" class="keyboard-display__input" placeholder="Натисніть клавіші нижче...">
+            </div>
+            <div class="keyboard-display__field">
+                <label for="kbd-result">Результат (Enter):</label>
+                <input id="kbd-result" type="text" class="keyboard-display__input keyboard-display__input--result" readonly>
+            </div>
+        </section>
+
+        <section class="keyboard">
+            <!-- Row 1 -->
+            <div class="keyboard__row keyboard__row--top">
+                <button class="key key--small">Esc</button>
+                <button class="key key--small">F1</button>
+                <button class="key key--small">F2</button>
+                <button class="key key--small">F3</button>
+                <button class="key key--small">F4</button>
+                <button class="key key--small">F5</button>
+                <button class="key key--small">F6</button>
+                <button class="key key--small">F7</button>
+                <button class="key key--small">F8</button>
+                <button class="key key--small">F9</button>
+                <button class="key key--small">F10</button>
+                <button class="key key--small">F11</button>
+                <button class="key key--small">F12</button>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="keyboard__row">
+                <button class="key">~</button>
+                <button class="key">1</button>
+                <button class="key">2</button>
+                <button class="key">3</button>
+                <button class="key">4</button>
+                <button class="key">5</button>
+                <button class="key">6</button>
+                <button class="key">7</button>
+                <button class="key">8</button>
+                <button class="key">9</button>
+                <button class="key">0</button>
+                <button class="key">-</button>
+                <button class="key">=</button>
+                <button class="key key--wide">Backspace</button>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="keyboard__row">
+                <button class="key key--wide">Tab</button>
+                <button class="key">Q</button>
+                <button class="key">W</button>
+                <button class="key">E</button>
+                <button class="key">R</button>
+                <button class="key">T</button>
+                <button class="key">Y</button>
+                <button class="key">U</button>
+                <button class="key">I</button>
+                <button class="key">O</button>
+                <button class="key">P</button>
+                <button class="key">[</button>
+                <button class="key">]</button>
+                <button class="key key--medium">\</button>
+            </div>
+
+            <!-- Row 4 -->
+            <div class="keyboard__row">
+                <button class="key key--wide">Caps</button>
+                <button class="key">A</button>
+                <button class="key">S</button>
+                <button class="key">D</button>
+                <button class="key">F</button>
+                <button class="key">G</button>
+                <button class="key">H</button>
+                <button class="key">J</button>
+                <button class="key">K</button>
+                <button class="key">L</button>
+                <button class="key">;</button>
+                <button class="key">'</button>
+                <button class="key key--wide">Enter</button>
+            </div>
+
+            <!-- Row 5 -->
+            <div class="keyboard__row">
+                <button class="key key--wide">Shift</button>
+                <button class="key">Z</button>
+                <button class="key">X</button>
+                <button class="key">C</button>
+                <button class="key">V</button>
+                <button class="key">B</button>
+                <button class="key">N</button>
+                <button class="key">M</button>
+                <button class="key">,</button>
+                <button class="key">.</button>
+                <button class="key">/</button>
+                <button class="key key--wide">Shift</button>
+            </div>
+
+            <!-- Row 6 -->
+            <div class="keyboard__row keyboard__row--bottom">
+                <button class="key key--medium">Ctrl</button>
+                <button class="key key--medium">Alt</button>
+                <button class="key key--space">Space</button>
+                <button class="key key--medium">Alt</button>
+                <button class="key key--medium">Ctrl</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="page__footer footer">
+        <p class="footer__text">© 2025 Holodnov Tymofii, КІД-41. Практична робота №4.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

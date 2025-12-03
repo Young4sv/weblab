@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+.page {
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #f3f4f6;
+    color: #111827;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    padding: 16px;
+    text-align: center;
+}
+
+.header__title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.header__subtitle {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.planner {
+    flex: 1;
+    padding: 16px;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 260px 1fr;
+}
+
+.planner__sidebar {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.06);
+}
+
+.planner__section-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.planner__checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.planner__checkbox input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.planner__notes {
+    width: 100%;
+    min-height: 120px;
+    margin-top: 8px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    font-family: inherit;
+    font-size: 14px;
+    resize: vertical;
+}
+
+.planner__grid {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.06);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: minmax(160px, auto);
+    gap: 12px;
+}
+
+.planner__day {
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.planner__day-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.planner__day-name {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.planner__day-date {
+    width: 70px;
+    padding: 4px 6px;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+    font-size: 12px;
+}
+
+.planner__tasks {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.planner__tasks label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+}
+
+.planner__tasks input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+}
+
+.planner__task-input {
+    flex: 1;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 2px 4px;
+    font-size: 13px;
+    font-family: inherit;
+}
+
+.planner__task-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    background: #eff6ff;
+}
+
+.footer {
+    padding: 12px 16px 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+@media (max-width: 900px) {
+    .planner {
+        grid-template-columns: 1fr;
+    }
+
+    .planner__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .planner__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+

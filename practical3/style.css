@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+.yt {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #0f0f0f;
+    color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+}
+
+.yt__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    background: #202020;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header__left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header__burger {
+    border: none;
+    background: transparent;
+    color: #f9f9f9;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.header__logo-icon {
+    width: 24px;
+    height: 18px;
+    border-radius: 4px;
+    background: #ff0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.header__logo-text {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.header__center {
+    display: flex;
+    align-items: center;
+    flex: 0 1 500px;
+}
+
+.header__search-input {
+    flex: 1;
+    padding: 6px 8px;
+    border-radius: 16px 0 0 16px;
+    border: 1px solid #303030;
+    background: #121212;
+    color: #f9f9f9;
+    font-size: 14px;
+}
+
+.header__search-btn {
+    border-radius: 0 16px 16px 0;
+    border: 1px solid #303030;
+    border-left: none;
+    padding: 6px 10px;
+    background: #303030;
+    color: #f9f9f9;
+    cursor: pointer;
+}
+
+.header__right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header__icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    background: #272727;
+    color: #f9f9f9;
+    cursor: pointer;
+}
+
+.header__avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #3ea6ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.yt__body {
+    display: flex;
+    flex: 1;
+}
+
+.yt__sidebar {
+    width: 230px;
+    background: #181818;
+    padding-top: 8px;
+    position: sticky;
+    top: 48px;
+    height: calc(100vh - 48px);
+    overflow-y: auto;
+}
+
+.sidebar__nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar__item {
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #f9f9f9;
+    text-decoration: none;
+}
+
+.sidebar__divider {
+    border: none;
+    border-top: 1px solid #3f3f3f;
+    margin: 4px 0;
+}
+
+.sidebar__item--active,
+.sidebar__item:hover {
+    background: #303030;
+}
+
+.yt__content {
+    flex: 1;
+    padding: 12px 16px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.chips {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.chips__item {
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: 1px solid #3f3f3f;
+    background: #272727;
+    color: #f9f9f9;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.chips__item--active {
+    background: #f1f1f1;
+    color: #0f0f0f;
+}
+
+/* Сетка видео */
+.content__videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+}
+
+/* Видео-карточка */
+.video-card {
+    background: #181818;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.video-card__thumb {
+    width: 100%;
+    height: 180px;           /* фиксированная высота превью */
+    overflow: hidden;
+    background: #000;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+}
+
+.video-card__thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       /* обрезка по центру */
+    object-position: center;
+    display: block;
+}
+
+/* Мета-информация под видео */
+.video-card__meta {
+    padding: 8px;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+}
+
+.video-card__title {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.video-card__channel {
+    color: #aaaaaa;
+}
+
+.video-card__info {
+    color: #717171;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+    .yt__sidebar {
+        display: none;
+    }
+
+    .yt__content {
+        padding: 8px;
+    }
+
+    .content__videos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .header__center {
+        display: none;
+    }
+
+    .content__videos {
+        grid-template-columns: 1fr;
+    }
+}

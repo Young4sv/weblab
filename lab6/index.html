@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №6 — Анімація Покемона</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page">
+    <header class="page__header header">
+        <h1 class="header__title">Лабораторна робота №6</h1>
+        <p class="header__subtitle">Анімація з використанням CSS та спрайтів Покемонів</p>
+    </header>
+
+    <main class="page__main scene">
+        <div class="scene__sky"></div>
+        <div class="scene__ground"></div>
+
+        <div class="scene__pokemon-layer">
+            <div class="pokemon pokemon--1" data-img="pokemon-sprite.png"></div>
+            <div class="pokemon pokemon--2" data-img="pikachu-f.png"></div>
+            <div class="pokemon pokemon--3" data-img="pikachu-gigantamax.png"></div>
+            <div class="pokemon pokemon--4" data-img="bewear.png"></div>
+            <div class="pokemon pokemon--5" data-img="heatran.png"></div>
+            <div class="pokemon pokemon--6" data-img="mabosstiff.png"></div>
+            <div class="pokemon pokemon--7" data-img="roaring-moon.png"></div>
+        </div>
+    </main>
+
+    <footer class="page__footer footer">
+        <p class="footer__text">
+            Виконав: Холоднов Тимофій, група КІД-41.  
+            Спрайти лежать у папці <code>lab6</code>, рух і швидкість задаються випадково за допомогою JS.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,129 @@
+/* Дуже проста реалізація ЛР №6 з анімацією спрайта та фону */
+
+/* Сцена та фон */
+.page {
+    min-height: 100vh;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #040816;
+    color: #fefefe;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    text-align: center;
+    padding: 16px;
+}
+
+.header__title {
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.header__subtitle {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.scene {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.scene__sky {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, #0b1b51, #1b4ab8, #32a4ff);
+    background-size: 300% 300%;
+    animation: sky-move 12s linear infinite;
+    z-index: 0;
+}
+
+.scene__ground {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 40%;
+    background: repeating-linear-gradient(
+        -45deg,
+        #1f7a36 0,
+        #1f7a36 10px,
+        #249541 10px,
+        #249541 20px
+    );
+    z-index: 1;
+}
+
+.scene__pokemon-layer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 15%;
+    bottom: 20%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.pokemon {
+    position: absolute;
+    width: 120px;
+    height: 128px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    image-rendering: pixelated;
+
+    /* Дві анімації: рух по X (left) + невеликий підстриб і масштаб */
+    animation-name: pokemon-move, pokemon-bob;
+    animation-iteration-count: infinite, infinite;
+    animation-timing-function: linear, ease-in-out;
+}
+
+.footer {
+    text-align: center;
+    padding: 12px;
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+/* Анімація неба (фон рухається) */
+@keyframes sky-move {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Рух покемона по землі зліва направо і невеликий підскок */
+@keyframes pokemon-move {
+    0% {
+        left: -150px;
+    }
+    50% {
+        left: 50%;
+    }
+    100% {
+        left: 110%;
+    }
+}
+
+@keyframes pokemon-bob {
+    0% {
+        transform: translateY(0) scale(0.9);
+    }
+    50% {
+        transform: translateY(-10px) scale(1.1);
+    }
+    100% {
+        transform: translateY(0) scale(0.9);
+    }
+}
+
+

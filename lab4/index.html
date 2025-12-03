@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №4 — Планер</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page">
+    <header class="page__header header">
+        <h1 class="header__title">Щотижневий планер</h1>
+        <p class="header__subtitle">Лабораторна робота №4. Простий планер на CSS Grid.</p>
+    </header>
+
+    <main class="page__main planner">
+        <section class="planner__sidebar">
+            <h2 class="planner__section-title">Цілі тижня</h2>
+            <label class="planner__checkbox">
+                <input type="checkbox">
+                <span>Здати всі лабораторні</span>
+            </label>
+            <label class="planner__checkbox">
+                <input type="checkbox">
+                <span>Підготуватися до заліків</span>
+            </label>
+            <label class="planner__checkbox">
+                <input type="checkbox">
+                <span>Виділити час на відпочинок</span>
+            </label>
+
+            <h2 class="planner__section-title">Нотатки</h2>
+            <textarea class="planner__notes" placeholder="Напишіть короткі нотатки..."></textarea>
+        </section>
+
+        <section class="planner__grid">
+            <div class="planner__day">
+                <div class="planner__day-header">
+                    <span class="planner__day-name">Понеділок</span>
+                    <input class="planner__day-date" type="text" placeholder="01.12">
+                </div>
+                <ul class="planner__tasks">
+                    <li>
+                        <label>
+                            <input type="checkbox">
+                            <input type="text" class="planner__task-input" value="Пара WEB тех.-2016">
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox">
+                            <input type="text" class="planner__task-input" value="Зробити ЛР №4">
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="planner__day">
+                <div class="planner__day-header">
+                    <span class="planner__day-name">Вівторок</span>
+                    <input class="planner__day-date" type="text" placeholder="02.12">
+                </div>
+                <ul class="planner__tasks">
+                    <li>
+                        <label>
+                            <input type="checkbox">
+                            <input type="text" class="planner__task-input" value="Практична з програмування">
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox">
+                            <input type="text" class="planner__task-input" placeholder="Нова задача...">
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="planner__day">
+                <div class="planner__day-header">
+                    <span class="planner__day-name">Середа</span>
+                    <input class="planner__day-date" type="text" placeholder="03.12">
+                </div>
+                <ul class="planner__tasks">
+                    <li>
+                        <label>
+                            <input type="checkbox">
+                            <input type="text" class="planner__task-input" value="Повторити конспект">
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox">
+                            <input type="text" class="planner__task-input" placeholder="Нова задача...">
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="planner__day">
+                <div class="planner__day-header">
+                    <span class="planner__day-name">Четвер</span>
+                    <input class="planner__day-date" type="text" placeholder="04.12">
+                </div>
+                <ul class="planner__tasks">
+                    <li>
+                        <label>
+                            <input type="checkbox">
+                            <input type="text" class="planner__task-input" placeholder="Нова задача...">
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="planner__day">
+                <div class="planner__day-header">
+                    <span class="planner__day-name">П’ятниця</span>
+                    <input class="planner__day-date" type="text" placeholder="05.12">
+                </div>
+                <ul class="planner__tasks">
+                    <li>
+                        <label>
+                            <input type="checkbox">
+                            <input type="text" class="planner__task-input" value="Підготуватися до пар">
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="planner__day">
+                <div class="planner__day-header">
+                    <span class="planner__day-name">Субота</span>
+                    <input class="planner__day-date" type="text" placeholder="06.12">
+                </div>
+                <ul class="planner__tasks">
+                    <li>
+                        <label>
+                            <input type="checkbox">
+                            <input type="text" class="planner__task-input" value="Відпочинок 🙂">
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="planner__day">
+                <div class="planner__day-header">
+                    <span class="planner__day-name">Неділя</span>
+                    <input class="planner__day-date" type="text" placeholder="07.12">
+                </div>
+                <ul class="planner__tasks">
+                    <li>
+                        <label>
+                            <input type="checkbox">
+                            <input type="text" class="planner__task-input" placeholder="План на наступний тиждень">
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="page__footer footer">
+        <p class="footer__text">© 2025 Holodnov Tymofii, КІД-41. Лабораторна робота №4.</p>
+    </footer>
+</body>
+</html>
+
+
+

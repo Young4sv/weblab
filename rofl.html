@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROFL MODE ACTIVATED</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+        }
+        .rofl-header {
+            padding: 10px 16px;
+            background: #111;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .rofl-header__title {
+            font-weight: 700;
+        }
+        .rofl-header__back {
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: #ff4081;
+            color: #fff;
+            text-decoration: none;
+            font-size: 12px;
+        }
+        .rofl-main {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 4px;
+            padding: 8px;
+            background-image: url("Rofl/Roll.gif");
+            background-size: 180px 140px;
+            background-repeat: repeat;
+            position: relative;
+        }
+        .rofl-main__overlay {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(0,0,0,0.15), rgba(0,0,0,0.7));
+            pointer-events: none;
+        }
+        .rofl-gif {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            image-rendering: pixelated;
+        }
+        .rofl-video-wrap {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: min(480px, 90vw);
+            z-index: 10;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .rofl-video-wrap video {
+            width: 100%;
+            display: block;
+        }
+        .rofl-preview {
+            position: absolute;
+            right: 8px;
+            top: 8px;
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+            border: 2px solid #fff;
+            background: #000;
+        }
+        .rofl-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .rofl-footer {
+            text-align: center;
+            font-size: 12px;
+            padding: 8px 12px;
+            background: #111;
+        }
+        @media (max-width: 600px) {
+            .rofl-main {
+                grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+                background-size: 140px 110px;
+            }
+            .rofl-video-wrap {
+                width: 95vw;
+            }
+        }
+    </style>
+</head>
+<!-- yes, this is absolutely necessary :) -->
+<body>
+    <header class="rofl-header">
+        <div class="rofl-header__title">ROFL MODE ACTIVATED</div>
+        <a href="index.html" class="rofl-header__back">Назад на сайт</a>
+    </header>
+
+    <main class="rofl-main">
+        <!-- Просто багато разів той самий gif, щоб усе мигало -->
+        <img src="Rofl/Roll.gif" alt="Rick roll" class="rofl-gif">
+        <img src="Rofl/Roll.gif" alt="Rick roll" class="rofl-gif">
+        <img src="Rofl/Roll.gif" alt="Rick roll" class="rofl-gif">
+        <img src="Rofl/Roll.gif" alt="Rick roll" class="rofl-gif">
+        <img src="Rofl/Roll.gif" alt="Rick roll" class="rofl-gif">
+        <img src="Rofl/Roll.gif" alt="Rick roll" class="rofl-gif">
+        <img src="Rofl/Roll.gif" alt="Rick roll" class="rofl-gif">
+        <img src="Rofl/Roll.gif" alt="Rick roll" class="rofl-gif">
+        <img src="Rofl/Roll.gif" alt="Rick roll" class="rofl-gif">
+        <img src="Rofl/Roll.gif" alt="Rick roll" class="rofl-gif">
+        <div class="rofl-main__overlay"></div>
+    </main>
+
+    <div class="rofl-video-wrap">
+        <video src="Rofl/Rick.mp4" autoplay loop muted controls></video>
+        <div class="rofl-preview" id="rofl-preview">
+            <img src="Rofl/Roll.gif" alt="Preview">
+        </div>
+    </div>
+
+    <footer class="rofl-footer">
+        Ніколи не довіряй маленьким кнопкам ROFL :)
+    </footer>
+
+    <script src="rofl.js"></script>
+</body>
+</html>
+
+
