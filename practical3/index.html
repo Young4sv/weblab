@@ -1,128 +1,57 @@
-<!DOCTYPE html>
-<html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Практична робота №3 — Головна сторінка YouTube (макет)</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="yt">
-    <header class="yt__header header">
-        <div class="header__left">
-            <button class="header__burger">☰</button>
-            <div class="header__logo">
-                <span class="header__logo-icon">▶</span>
-                <span class="header__logo-text">YouTube</span>
-            </div>
-        </div>
-        <div class="header__center">
-            <input class="header__search-input" type="text" placeholder="Введите запрос">
-            <button class="header__search-btn">🔍</button>
-        </div>
-        <div class="header__right">
-            <button class="header__icon">⬆️</button>
-            <button class="header__icon">🔔</button>
-            <div class="header__avatar">XW</div>
-        </div>
-    </header>
+<div class="content__videos">
 
-    <p style="padding: 4px 16px; font-size: 13px;">
-        <a href="../index.html" style="color:#3ea6ff;">← Повернутися на головну сторінку</a>
-    </p>
-
-    <div class="yt__body">
-        <aside class="yt__sidebar sidebar">
-            <nav class="sidebar__nav">
-                <a href="#" class="sidebar__item sidebar__item--active">Главная</a>
-                <a href="#" class="sidebar__item">Shorts</a>
-                <a href="#" class="sidebar__item">Подписки</a>
-                <a href="#" class="sidebar__item">Вы</a>
-                <hr class="sidebar__divider">
-                <a href="#" class="sidebar__item">История</a>
-                <a href="#" class="sidebar__item">Плейлисты</a>
-                <a href="#" class="sidebar__item">Смотреть позже</a>
-            </nav>
-        </aside>
-
-        <main class="yt__content content">
-            <section class="chips">
-                <button class="chips__item chips__item--active">Все</button>
-                <button class="chips__item">Видеоигры</button>
-                <button class="chips__item">Музыка</button>
-                <button class="chips__item">Прямые трансляции</button>
-                <button class="chips__item">Новости</button>
-                <button class="chips__item">Недавно загруженные</button>
-            </section>
-
-            <section class="content__section">
-                <div class="content__videos">
-                    <a class="video-card" href="https://youtu.be/ERz9H2OGfB4?si=hiVPyGSWOxg90Yfd" target="_blank" rel="noopener noreferrer">
-                        <img class="video-card__thumb" src="Trails/To Azure.png" alt="The Legend of Heroes: Trails to Azure -Evolution- Opening">
-                        <div class="video-card__meta">
-                            <h3 class="video-card__title">The Legend of Heroes: Trails to Azure -Evolution- Opening</h3>
-                            <p class="video-card__channel">The Legend of Heroes</p>
-                            <p class="video-card__info">135K просмотров • 1 год назад</p>
-                        </div>
-                    </a>
-
-                    <a class="video-card" href="https://www.youtube.com/watch?v=KF5WkAdv2tE" target="_blank" rel="noopener noreferrer">
-                        <img class="video-card__thumb" src="Trails/Trails Second Chapter teaser.png" alt="Trails in the Sky 2nd Chapter Remake - Teaser">
-                        <div class="video-card__meta">
-                            <h3 class="video-card__title">Trails in the Sky 2nd Chapter Remake - Teaser</h3>
-                            <p class="video-card__channel">The Legend of Heroes</p>
-                            <p class="video-card__info">87K просмотров • 2 года назад</p>
-                        </div>
-                    </a>
-
-                    <a class="video-card" href="https://youtu.be/Wh9L0PrfYWc?si=RV6TrVMq6BHDsWU8" target="_blank" rel="noopener noreferrer">
-                        <img class="video-card__thumb" src="Trails/Trails First Chapter OP.png" alt="Opening Movie - Trails in the Sky 1st Chapter">
-                        <div class="video-card__meta">
-                            <h3 class="video-card__title">Opening Movie - Trails in the Sky 1st Chapter</h3>
-                            <p class="video-card__channel">The Legend of Heroes</p>
-                            <p class="video-card__info">220K просмотров • 3 года назад</p>
-                        </div>
-                    </a>
-
-                    <a class="video-card" href="https://youtu.be/bkbp5Gx_cmU?si=wkG1p6VF6QODJlRf" target="_blank" rel="noopener noreferrer">
-                        <img class="video-card__thumb" src="Trails/Cold steel 1.png" alt="The Legend of Heroes: Trails of Cold Steel Opening">
-                        <div class="video-card__meta">
-                            <h3 class="video-card__title">The Legend of Heroes: Trails of Cold Steel Opening</h3>
-                            <p class="video-card__channel">The Legend of Heroes</p>
-                            <p class="video-card__info">310K просмотров • 4 года назад</p>
-                        </div>
-                    </a>
-
-                    <a class="video-card" href="https://www.youtube.com/watch?v=O8JLK7xY1hw" target="_blank" rel="noopener noreferrer">
-                        <img class="video-card__thumb" src="Trails/Cold steel 2.png" alt="The Legend of Heroes: Trails of Cold Steel II - Opening">
-                        <div class="video-card__meta">
-                            <h3 class="video-card__title">The Legend of Heroes: Trails of Cold Steel II - Opening</h3>
-                            <p class="video-card__channel">The Legend of Heroes</p>
-                            <p class="video-card__info">190K просмотров • 3 года назад</p>
-                        </div>
-                    </a>
-
-                    <a class="video-card" href="https://www.youtube.com/watch?v=CunFj9LRWiM" target="_blank" rel="noopener noreferrer">
-                        <img class="video-card__thumb" src="Trails/Trails 3rd Op Evo.png" alt="Trails 3rd Op Evolution">
-                        <div class="video-card__meta">
-                            <h3 class="video-card__title">Trails 3rd Op Evolution</h3>
-                            <p class="video-card__channel">The Legend of Heroes</p>
-                            <p class="video-card__info">75K просмотров • 5 лет назад</p>
-                        </div>
-                    </a>
-
-                    <a class="video-card" href="https://youtu.be/o1iFUT8L-_g?si=pAKy4hLa0eCOFFgM" target="_blank" rel="noopener noreferrer">
-                        <img class="video-card__thumb" src="Trails/Trails into Reverie Op.png" alt="The Legend of Heroes: Trails into Reverie - Opening Movie">
-                        <div class="video-card__meta">
-                            <h3 class="video-card__title">The Legend of Heroes: Trails into Reverie - Opening Movie</h3>
-                            <p class="video-card__channel">The Legend of Heroes</p>
-                            <p class="video-card__info">156K просмотров • 11 месяцев назад</p>
-                        </div>
-                    </a>
-                </div>
-            </section>
-        </main>
+  <a class="video-card" href="https://www.youtube.com/watch?v=_RAhrisU6Mc" target="_blank" rel="noopener noreferrer">
+    <img class="video-card__thumb" src="Trails/video1.png" alt="Cutscene Animation: &quot;Sinner's Finale&quot; | Genshin Impact">
+    <div class="video-card__meta">
+      <h3 class="video-card__title">Cutscene Animation: "Sinner's Finale" | Genshin Impact</h3>
+      <p class="video-card__channel">Genshin Impact</p>
+      <p class="video-card__info">1,2 млн переглядів • 3 місяці тому</p>
     </div>
-</body>
-</html>
+  </a>
 
+  <a class="video-card" href="https://www.youtube.com/watch?v=j3661mhHfvY" target="_blank" rel="noopener noreferrer">
+    <img class="video-card__thumb" src="Trails/video2.png" alt="4th Anniversary Theme Song: &quot;Passing Memories&quot;">
+    <div class="video-card__meta">
+      <h3 class="video-card__title">4th Anniversary Theme Song: "Passing Memories"</h3>
+      <p class="video-card__channel">Genshin Impact</p>
+      <p class="video-card__info">850 тис. переглядів • 4 місяці тому</p>
+    </div>
+  </a>
 
+  <a class="video-card" href="https://www.youtube.com/watch?v=BW5G7v5PqPc" target="_blank" rel="noopener noreferrer">
+    <img class="video-card__thumb" src="Trails/video3.png" alt="Writing on the Wall - Will Stetson [Kaveh Fansong]">
+    <div class="video-card__meta">
+      <h3 class="video-card__title">Writing on the Wall [Kaveh Fansong]</h3>
+      <p class="video-card__channel">Will Stetson</p>
+      <p class="video-card__info">420 тис. переглядів • 1 рік тому</p>
+    </div>
+  </a>
+
+  <a class="video-card" href="https://www.youtube.com/watch?v=-EtOAaK19bA" target="_blank" rel="noopener noreferrer">
+    <img class="video-card__thumb" src="Trails/video4.png" alt="Warframe | Sleeping In The Cold Below">
+    <div class="video-card__meta">
+      <h3 class="video-card__title">Warframe | Sleeping In The Cold Below</h3>
+      <p class="video-card__channel">Warframe</p>
+      <p class="video-card__info">3,5 млн переглядів • 4 роки тому</p>
+    </div>
+  </a>
+
+  <a class="video-card" href="https://www.youtube.com/watch?v=9f7axxFp8dQ" target="_blank" rel="noopener noreferrer">
+    <img class="video-card__thumb" src="Trails/video5.png" alt="Dark Multiverse (Destiny 2 Beyond Light Trailer Song)">
+    <div class="video-card__meta">
+      <h3 class="video-card__title">Dark Multiverse (Destiny 2 Beyond Light)</h3>
+      <p class="video-card__channel">Ninja Tracks</p>
+      <p class="video-card__info">610 тис. переглядів • 5 років тому</p>
+    </div>
+  </a>
+
+  <a class="video-card" href="https://www.youtube.com/watch?v=yPULlTe4VfQ" target="_blank" rel="noopener noreferrer">
+    <img class="video-card__thumb" src="Trails/video6.png" alt="YouTube відео">
+    <div class="video-card__meta">
+      <h3 class="video-card__title">YouTube Video</h3>
+      <p class="video-card__channel">YouTube</p>
+      <p class="video-card__info">250 тис. переглядів • 2 роки тому</p>
+    </div>
+  </a>
+
+</div>
